@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+
+    <environments default="development">
+        <!--默认是开发者模式 -->
+        <environment id="development">
+            <!--事务管理器配置的连接方式是JDBC，直接使用了JDBC的提交和回滚设置-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!-- 数据源的接口是使用POOLED的方式：
+POOLED - 这种数据源的实现利用“池”的概念将JDBC连接对象组织起来，
+避免了创建先的连接实例时所必须的初始化和认证时间。
+这是一种使得并发WEb应用快速响应请求的流行的处理方式。-->
+            <dataSource type="POOLED">
+                <!-- value属性值引用db.properties配置文件中配置的值 -->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.imooc.canvas.mapper"/>
+    </mappers>
+</configuration>

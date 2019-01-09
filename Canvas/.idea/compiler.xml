@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="canvas-common" />
+        <module name="canvas-management" />
+        <module name="canvas-site" />
+        <module name="Common" />
+        <module name="Management" />
+        <module name="Site" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

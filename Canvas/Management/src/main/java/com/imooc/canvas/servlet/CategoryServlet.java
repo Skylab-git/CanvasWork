@@ -38,17 +38,18 @@ public class CategoryServlet extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/views/biz/category_list.jsp").forward(req, resp);
         } else if ("/category/addPrompt.do".equals(req.getServletPath())) {
             req.getRequestDispatcher("/WEB-INF/views/biz/add_category.jsp").forward(req, resp);
-        } else if ("/category/add.do".equals(req.getServletPath())) {
-            //获取request请求中的name
-            String name = req.getParameter("name");
-            //创建分类对象
-            Category category = new Category();
-            //设置分类对象的名称
-            category.setName(name);
-            //然后将该分类对象添加到数据库的分类信息中
-            categoryService.addCategory(category);
-            req.getRequestDispatcher("/category/list.do").forward(req, resp);
         }
+//        else if ("/category/add.do".equals(req.getServletPath())) {
+//            //获取request请求中的name
+//            String name = req.getParameter("name");
+//            //创建分类对象
+//            Category category = new Category();
+//            //设置分类对象的名称
+//            category.setName(name);
+//            //然后将该分类对象添加到数据库的分类信息中
+//            categoryService.addCategory(category);
+//            req.getRequestDispatcher("/category/list.do").forward(req, resp);
+//        }
     }
 
     @Override
